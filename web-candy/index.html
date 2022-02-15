@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPSCLE</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    
+</head>
+
+<body>
+  <div class="bagckColor1">
+    <!-- 探すスマホ用 -->
+    <div class="search-sp" id="search-sp-click">
+      <form action="#" method="get" class="search" id="search-sp">
+        <input type="text" size="25" placeholder="Search...">
+        <input type="submit" value="&#xf002">
+      </form>
+      <i class="fas fa-times" id="fa-times"></i>
+    </div>
+    <header>
+      <div class="headerTop">
+
+        <di class="headerLeft">
+          <h1>POPSCLE</h1>
+        </di>
+        <div class="headerRight">
+          <!-- 探す -->
+          <form action="#" method="get" class="search" id="search">
+            <input type="text" size="25" placeholder="Search...">
+            <input type="submit" value="&#xf002">
+          </form>
+          <i class="fas fa-search" id="fa-search"></i>
+          <!-- マイページ -->
+          <a href="#">
+            <i class="fas fa-user"></i>
+          </a>
+          <!-- カート -->
+          <a href="#">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- スライダー -->
+    <div class="swiper" id="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/slider1.jpg" alt="画像1">
+          <p>夏季限定</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider2.jpg" alt="画像2">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider3.jpg" alt="画像3">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider4.jpg" alt="画像4">
+        </div>
+      </div>
+      
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+
+    </div>
+
+  </div>
+
+  <!-- News -->
+  <section>
+    <div class="wrap">
+      <div class="contents">
+        <h3 class="heading">
+          News
+        </h3>
+        <nav>
+          <ul class="newsBox">
+            <li>
+              <a href="#">
+                <img src="img/news1.jpg" alt="News1">
+              </a>
+              <p>2022.03.25発売の●●雑誌に掲載！！</p>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/news2.jpg" alt="News1">
+              </a>
+              <p>2022.06 新商品発売決定！</p>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/news3.jpg" alt="News1">
+              </a>
+              <p>サーバーメンテナンスのお知らせ</p>
+            </li>
+          </ul>
+        </nav>
+        <a class="more" href="#">
+          MORE
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- こだわり -->
+  <section>
+    <div class="wrap">
+      <div class="contents">
+        <h3 class="heading">
+          Popsicleのこだわり
+        </h3>
+        <ul class="pickyBox">
+          <li>
+            <div class="picky">
+              <a href="#">
+                <img src="img/hitch1.jpg" alt="フルーツ">
+              </a>
+              <h4><span style="color: #FF9F80;">フルーツ</span>へのこだわり</h4>
+            </div>
+            <p>フルーツ本来の持ち味を引き出すようにひとつひとつ丁寧に検品し、手間暇をかけて仕上げています。</p>
+          </li>
+          <li>
+            <div class="picky">
+              <a href="#">
+                <img src="img/hitch2.jpg" alt="素材">
+              </a>
+              <h4><span style="color: #99E68A;">素材</span>へのこだわり</h4>
+            </div>
+            <p>全ての商品に安定剤、着色料、乳化剤など余分な添加物は使用していません。</p>
+          </li>
+          <li>
+            <div class="picky">
+              <a href="#">
+                <img src="img/hitch3.jpg" alt="製造">
+              </a>
+              <h4><span style="color: #7ACCCC;">製造</span>へのこだわり</h4>
+            </div>
+            <p>急速冷凍することで、フレッシュなおいしさを閉じ込めています。</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- new Arrival -->
+  <section>
+    <div class="wrap arrivalWrap">
+      <div class="contents">
+        <h3 class="heading">
+          new Arrival
+        </h3>
+        <div class="newIceBox">
+          <div class="newIce">
+            <img src="img/item1.png" alt="newIce">
+          </div>
+          <div class="newIceText">
+              <h4>自家製ストロベリー<span>&#38;</span></h4>
+              <h4>マカデミアナッツ</h4>
+              <p>バニラアイスクイームに自家製ストロベリーソースと有機ナッツ,いちごパウダーをふりかけています。</p>
+              <p class="price">
+                各1本: 230円(税込)
+              </p>
+              <a href="#" class="detail">
+                詳細を見る
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT -->
+  <section>
+    <div class="wrap">
+      <div class="contents">
+        <h3 class="heading">
+          EVENT
+        </h3>
+        <p class="eventText">
+          今だけセット売り商品をご購入のお客様に期間限定商品の
+          <br>アイスキャンディーを一本追加プレゼントします！！
+        </p>
+        <div class="eventItems">
+          <div class="eventItem eventItem1">
+            <p class="rotate">1本追加！！</p>
+            <div class="itemSet">
+              <img src="img/item2.png" alt="item1-1">
+              <img src="img/items-2.png" alt="3本セット">
+            </div>
+              <div class="valueSet">
+                <p><span>3</span>本入りセット</p>
+                <p>460円</p>
+                <a href="#" class="detail">
+                  詳細を見る
+                </a>
+              </div>
+          </div>
+          <div class="eventItem eventItem2">
+            <p class="rotate">1本追加！！</p>
+            <div class="itemSet">
+              <img src="img/item2.png" alt="item1-2">
+              <img src="img/items-1.png" alt="5本セット">
+            </div>
+              <div class="valueSet">
+                <p><span>5</span>本入りセット</p>
+                <p>820円</p>
+                <a href="#" class="detail">
+                  詳細を見る
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 商品一覧 -->
+  <section>
+    <div class="wrap itemListWrap" style="margin-bottom: 0;">
+      <div class="contents">
+        <h3 class="heading">
+          商品一覧
+        </h3>
+        <ul class="itemList">
+          <li>
+            <div class="item">
+              <span>NEW</span>
+              <a href="#">
+                <img src="img/ice1.jpg" alt="アイス1">
+              </a>
+              <h4>ラズベリーヨーグルトアイス</h4>
+            </div>
+            <p>180円</p>
+          </li>
+          <li>
+            <div class="item">
+              <span>NEW</span>
+              <a href="#">
+                <img src="img/ice3.jpg" alt="アイス2">
+              </a>
+              <h4>パインアップルアイス</h4>
+            </div>
+            <p>180円</p>
+          </li>
+          <li>
+            <div class="item">
+              <a href="#">
+                <img src="img/ice2.jpg" alt="アイス3">
+              </a>
+              <h4>グリーンレモンアイス</h4>
+            </div>
+            <p>160円</p>
+          </li>
+          <li>
+            <div class="item">
+              <a href="#">
+                <img src="img/ice4.jpg" alt="アイス4">
+              </a>
+              <h4>チョコチップバニラアイス</h4>
+            </div>
+            <p>160円</p>
+          </li>
+        </ul>
+        <a class="more" href="#">
+          MORE
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUPONGET -->
+  <section>
+    <a href="#" class="cuponGet">
+      <h4>CUPON GET!!</h4>
+    </a>
+  </section>
+
+  <footer>
+    <div class="footerWrap">
+      <div class="footerBox footerLeft">
+        <h4>SHOPPING GUIDE</h4>
+        <ul>
+          <li>
+            <a href="#">
+              特定商取引法に基づく表記
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              個人情報保護方針
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              送料について
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              会員規約
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footerBox footerRight">
+        <h4>SNS</h4>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="contact">
+          <a href="#">
+            お問い合わせ
+          </a>
+          <i class="fas fa-paper-plane"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

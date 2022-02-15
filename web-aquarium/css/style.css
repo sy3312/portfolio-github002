@@ -1,0 +1,857 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Nanum+Myeongjo&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: rgba(245,245,245,.99);
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Nanum Myeongjo', serif;
+  color: #F5F5F5;
+}
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+a{
+  color: #F5F5F5;
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+.mainImage{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/top-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+/* 共通CSS */
+.wrap {
+  width: 100%;
+  margin: 0 auto 100px;
+}
+h3.heading {
+  font-size: 19px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+p.comment {
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  max-width: 540px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.box {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* header */
+ul.headerNav{
+  display: -webkit-flex;
+	display: flex;
+  -webkit-justify-content: flex-end;
+	justify-content: flex-end;
+  padding: 2%;
+}
+ul.headerNav li{
+  padding-right: 15px;
+}
+ul.headerNav li a{
+  height: 60px;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+ul.headerNav li a img{
+  display: block;
+  width: 35px;
+  margin: 0 auto;
+}
+ul.headerNav li a p{
+  font-size: 12px;
+  color: #f5f5f5;
+  padding-top: 5px;
+}
+header .headerTitle {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  font-size: 33px;
+  letter-spacing: 4px;
+  color: #f5f5f5;
+  opacity: .8;
+}
+.schedule-sp{
+  display: none;
+}
+.schedule {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: #f5f5f5;
+  letter-spacing: 2px;
+  border: 1px solid #f5f5f5;
+  border-radius: 6px;
+  padding: 30px 35px;
+}
+.schedule p:nth-of-type(1){
+  font-size: 18px;
+  padding-bottom: 17px;
+}
+.schedule p:nth-of-type(2){
+  font-size: 17px;
+  padding-bottom: 17px;
+}
+.schedule span{
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #333;
+  padding: 6px 5px;
+  border-radius: 6px;
+  color: #333;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, .8);
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* スクロールイベント */
+.wrap.show .animationTitle {
+  opacity: 1;
+  animation: animationShowTitle 2s;
+}
+.wrap.show .items ul .item {
+  animation-name: animationShowItems;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+.wrap.show .newsContents {
+  opacity: 1;
+}
+.wrap.show .situation {
+  animation-name: animationShowSituation;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+.wrap.show .priceBox {
+  animation-name: animationShowPriceBox;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+/* 深海の世界へ行こう */
+.animationTitle {
+  font-size: 26px;
+  text-align: center;
+  margin: 100px 0 150px;
+  letter-spacing: 3px;
+
+  opacity: 0;
+}
+@keyframes animationShowTitle {
+  0% {
+    transform: translateY(-190px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-50px);
+    font-size: 20px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 26px;
+    transform: translateY(0);
+  }
+}
+
+
+.items ul{
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+  flex-wrap: wrap;
+}
+.items ul .item{
+  width: 25%;
+  position: relative;
+  padding: 1%;
+
+  opacity: 0;
+}
+
+.items ul .item{
+  animation-delay: .3s;
+}
+.items ul .item2{
+  animation-delay: .5s;
+}
+.items ul .item3{
+  animation-delay: .9s;
+}
+.items ul .item4{
+  animation-delay: 1.2s;
+}
+@keyframes animationShowItems {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.items ul li a{
+  transition: 0.5s;
+}
+.items ul li a img{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.items ul li a p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+/* お知らせ */
+.newsContents {
+  opacity: 0;
+  transition: 6s;
+}
+.newsContents a{
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+  justify-content: center;
+}
+.newsContents li{
+  width: 100%;
+  display: -webkit-flex;
+	display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+  padding-top: 13px;
+  border-top: 1px dotted #f5f5f5;
+}
+.newsContents a:nth-of-type(3){
+  border-bottom: 1px dotted #f5f5f5;
+}
+.newsContents .day{
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.newsContents .label{
+  color: #333;
+  font-size: 11px;
+  background-color: rgba(245, 245, 245, .8);
+  padding: 5px 9px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+.newsContents .text{
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-left: 20px;
+  transition: 0.6s;
+}
+.newsMore{
+  max-width: 120px;
+  width: 100%;
+  margin: 30px auto 0;
+  display: block;
+  font-size: 13px;
+  letter-spacing: 2px;
+  border: 1px solid #333;
+  padding: 6px 5px;
+  border-radius: 6px;
+  color: #333;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, .8);
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* 久遠水族館の楽しみ方 */
+ul.situationContents {
+  max-width: 850px;
+  width: 100%;
+  margin: 40px auto 0;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+
+ul.situationContents .situation{
+  width: 33.33%;
+  padding: 1%;
+  position: relative;
+
+  opacity: 0;
+}
+ul.situationContents .situation1 {
+  animation-delay: .5s;
+}
+ul.situationContents .situation2 {
+  animation-delay: 1s;
+}
+ul.situationContents .situation3 {
+  animation-delay: 1.8s;
+}
+@keyframes animationShowSituation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+ul.situationContents .situation p{
+  position: absolute;
+  font-size: 33px;
+  letter-spacing: 3px;
+  z-index: 10;
+  text-shadow: 4px 4px 0px rgba(211, 211, 211, 0.5), 8px 8px 0px rgba(0, 0, 0, 0.2);
+}
+ul.situationContents .situation1 p{
+  top: 30px;
+  left: 2%;
+}
+ul.situationContents .situation2 p{
+  bottom: 30px;
+  left: 4%;
+}
+ul.situationContents .situation3 p{
+  top: 30px;
+  left: 10%;
+}
+ul.situationContents .situation a img{
+  display: block;
+  max-width: 180px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+/* 久遠水族館の深海カフェ */
+.foodwrap {
+  width: 100%;
+  margin: 20px auto 0;
+}
+  a.foodImage{
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/food.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: 0.5s;
+  }
+/* チケット料金 */
+.priceList{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+  flex-wrap: wrap;
+}
+.priceBox {
+  width: 45%;
+  padding: 0 2%;
+
+  opacity: 0;
+}
+.priceList1 {
+  animation-delay: .2s;
+}
+.priceList2 {
+  animation-delay: .5s;
+}
+@keyframes animationShowPriceBox {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.priceBox h4{
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.priceList1 h4{
+  border-bottom: 4px solid #A7CFFF;
+}
+.priceList2 h4{
+  border-bottom: 4px solid #C3FDFF;
+}
+.priceBox ul{
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+  font-size: 14px;
+}
+.priceBox ul li{
+  display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 0 1% 17px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.priceBox ul li .subject::after{
+  content: '・・・';
+  margin-left: 20px;
+}
+/* アクセスマップ */
+.mapwrap {
+  width: 100%;
+  margin: 0 auto;
+}
+a.mapImage{
+  width: 100%;
+  height: 330px;
+  display: block;
+  background-image: url(../img/googlemap.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.5s;
+}
+/* フッター */
+footer {
+  width: 100%;
+  background-color: rgba(0, 21, 51, 1);
+  padding: 40px 0;
+}
+.footerWrap {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1%;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.footerBox {
+  letter-spacing: 2px;
+}
+.footerLeft .footerBox .title{
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+.footerLeft .footerBox{
+  font-size: 12px;
+  padding: 5%;
+}
+.footerLeft .footerBox ul{
+  margin-top: 15px;
+}
+.footerLeft .footerBox ul li{
+  display: -webkit-flex;
+	display: flex;
+  padding-bottom: 5px;
+}
+.footerLeft .footerBox ul li .mail::after{
+  content: '：';
+  margin-right: 5px;
+}
+.footerRight {
+  display: -webkit-flex;
+	display: flex;
+  -webkit-justify-content: flex-end;
+	justify-content: flex-end;
+  flex-wrap: wrap;
+  padding-left: 15px;
+}
+.footerRight .footerBox{
+  width: 30%;
+  margin-bottom: 10px;
+}
+.footerRight .footerBox h4{
+  font-size: 15px;
+}
+.footerRight .footerBox ul li{
+  font-size: 12px;
+  margin-top: 3px;
+}
+.footerRight .footerBox ul{
+  margin-top: 5px;
+}
+
+
+/* ハンバーガーメニュー */
+.ham {
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  width: 45px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 100;
+
+  display: none;
+}
+.ham span{
+  width: 100%;
+  height: 3px;
+  background-color: #f5f5f5;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: .3s;
+}
+.ham span:nth-of-type(2){
+  top: 15px;
+}
+.ham span:nth-of-type(3){
+  top: 30px;
+}
+/* js clickイベント */
+.ham.clickAction span:nth-of-type(1) {
+  transform: rotate(-45deg);
+  top: 11px;
+}
+.ham.clickAction span:nth-of-type(2) {
+  opacity: 0;
+}
+.ham.clickAction span:nth-of-type(3) {
+  transform: rotate(45deg);
+  top: 11px;
+}
+.hamNav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 99;
+  width: 40%;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, .8);
+  opacity: .9;
+  transition: .6s;
+}
+ul.hamNav{
+  padding-top: 110px;
+  height: 100vh;
+}
+ul.hamNav li a{
+  display: block;
+  width: 100%;
+  color: #F5F5F5;
+  border-top: 2px solid #f5f5f5;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 7%;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: bold !important;
+}
+ul.hamNav li:nth-of-type(5){
+  border-bottom: 2px solid #f5f5f5;
+}
+ul.hamNav li {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+ul.hamNav li a::after{
+  content: '';
+	position: absolute;
+  top:42%;
+  right: 13px;
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #f5f5f5;
+  border-right: 2px solid #f5f5f5;
+  transform: rotate(45deg);
+}
+ul.hamNav.clickOpen{
+  right: 0;
+}
+/* マウスホバー */
+@media screen and (min-width: 768px) {
+  /* 当日券の購入 */
+  .schedule span:hover{
+    color: #f5f5f5;
+    background-color: rgba(169, 169, 169, .8);
+    border: 1px solid #f5f5f5;
+  }
+  /* items */
+  .items ul li a:hover img{
+    opacity: .7;
+    transform: scale(1.04);
+  }
+  /* お知らせ */
+  .newsContents a:hover .text{
+    opacity: .7;
+    transform: scale(1.02);
+  }
+  .newsContents a:hover{
+    opacity: .7;
+  }
+  .newsMore:hover{
+    opacity: .7;
+  }
+  /* 久遠水族館の楽しみ方 */
+  ul.situationContents .situation a img:hover{
+    transform: scale(1.04);
+  }
+  /* 久遠水族館の深海カフェ */
+  a.foodImage:hover{
+    transform: scale(1.04);
+  }
+  /* アクセスマップ */
+  a.mapImage:hover{
+    transform: scale(1.04);
+  }
+}
+
+
+/* レスポンシブここから */
+
+@media screen and (max-width: 768px){
+.ham {
+  display: block;
+}
+ul.headerNav{
+  padding-right: 80px;
+}
+  /* 共通CSS */
+.wrap {
+  width: 100%;
+  margin: 0 auto 70px;
+}
+h3.heading {
+  font-size: 17px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.animationTitle {
+  font-size: 23px;
+  margin: 100px 0 90px;
+}
+.schedule {
+  display: none;
+}
+.schedule-sp {
+  display: block;
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+.schedule-sp p:nth-of-type(1)::after{
+  content: '：';
+  margin-left: 3px;
+}
+.schedule-sp p:nth-of-type(2){
+  padding-left: 10px;
+}
+.schedule-sp span{
+  border: 1px solid #333;
+  padding: 6px 9px;
+  border-radius: 9px;
+  color: #333;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, .8);
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 15px;
+}
+.items ul li a p{
+  font-size: 13px;
+}
+a.foodImage{
+  height: 250px;
+}
+a.mapImage{
+  height: 250px;
+}
+
+}
+
+@media screen and (max-width: 578px) {
+  /* ハンバーガーメニュー */
+.ham {
+  width: 41px;
+  height: 25px;
+}
+.ham span{
+  height: 3px;
+}
+.hamNav {
+  width: 100%;
+}
+  .priceBox {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  .footerLeft .footerBox .title{
+    font-size: 24px;
+    margin-bottom: 17px;
+  }
+  .footerRight .footerBox{
+    display: none;
+  }
+}
+@media screen and (max-width: 468px) {
+h3.heading {
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+p.comment {
+  font-size: 11px;
+  letter-spacing: 1px;
+  width: 98%;
+}
+.animationTitle {
+  font-size: 19px;
+  margin: 80px 0 60px;
+}
+ul.headerNav{
+  padding-right: 60px;
+}
+ul.headerNav li a{
+  height: 45px;
+}
+ul.headerNav li a img{
+  width: 28px;
+}
+ul.headerNav li a p{
+  font-size: 10px;
+  padding-top: 2px;
+  letter-spacing: normal;
+}
+
+header .headerTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 29px;
+}
+.schedule-sp {
+  left: 1%;
+  bottom: 2%;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.items ul li.item{
+  width: 50%;
+}
+.items ul li a p{
+  font-size: 11px;
+}
+.newsContents a{
+  width: 95%;
+}
+.newsContents .day{
+  font-size: 12px;
+  letter-spacing:1px;
+  margin-right: 10px;
+}
+.newsContents .label{
+  width: 65px;
+  font-size: 10px;
+  padding: 4px 6px;
+  text-align: center;
+}
+.newsContents .text{
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  transition: 0.6s;
+}
+.newsMore{
+  font-size: 12px;
+}
+ul.situationContents .situation p{
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+ul.situationContents .situation a img{
+  width: 88%;
+  height: 260px;
+}
+a.foodImage{
+  height: 200px;
+  background-attachment: scroll;
+}
+a.mapImage{
+  height: 200px;
+  background-attachment: scroll;
+}
+.priceBox {
+  width: 95%;
+  margin-bottom: 60px;
+}
+.priceBox h4 {
+  font-size: 15px;
+}
+.priceBox ul{
+  font-size: 12px;
+}
+}

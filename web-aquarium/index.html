@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久遠水族館</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+  <script>bubbly({
+    blur:15,
+    colorStart: '#194167',
+    colorStop: '#112144',
+    radiusFunc:() => 5 + Math.random() * 15,
+    angleFunc:() => -Math.PI / 2,
+    velocityFunc:() => Math.random() * 7.5,
+    bubbleFunc:() => `hsla(${200 + Math.random() * 50}, 100%, 65%, .1)`,
+    bubbles:350
+  });</script>
+  <!-- ハンバーガー -->
+  <div class="ham" id="ham">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="hamNav" id="hamNav">
+    <li>
+      <a href="#">
+        久遠水族館について
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        営業時間について
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        館内ガイド
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        アクセス
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        生物
+      </a>
+    </li>
+  </ul>
+  <div class="mainImage">
+    <header>
+      <nav>
+        <ul class="headerNav">
+          <li>
+            <a href="#">
+              <img src="img/map.png" alt="アクセス">
+              <p>アクセス</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/ticket.png" alt="チケット">
+              <p>チケット購入</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="headerTitle">久遠水族館</h1>
+      <div class="schedule">
+        <p>本日の営業時間</p>
+        <p>9:00 ~ 19:00</p>
+        <span>当日券の購入</span>
+      </div>
+      <div class="schedule-sp">
+        <p>本日の営業時間</p>
+        <p>9:00 ~ 19:00</p>
+        <span>当日券の購入</span>
+      </div>
+    </header>
+  </div>
+  <div class="wrap">
+    <h2 class="animationTitle" id="animationTitle">
+      深海の世界へ行こう
+    </h2>
+  </div>
+  <main>
+    <!-- アイテム -->
+    <section>
+      <div class="wrap">
+        <div class="items">
+          <ul>
+            <li class="item item1">
+              <a href="#">
+                <img src="img/time.jpg" alt="営業時間">
+                <p>営業時間・料金</p>
+              </a>
+            </li>
+            <li class="item item2">
+              <a href="#">
+                <img src="img/pass.jpg" alt="年間パス">
+                <p>年間パスポート</p>
+              </a>
+            </li>
+            <li class="item item3">
+              <a href="#">
+                <img src="img/floor.jpg" alt="フロアガイド">
+                <p>フロアガイド</p>
+              </a>
+            </li>
+            <li class="item item4">
+              <a href="#">
+                <img src="img/event.jpg" alt="イベント">
+                <p>特集・イベント</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- お知らせ -->
+    <section>
+      <div class="wrap">
+        <h3 class="heading">
+          お知らせ・イベント情報
+        </h3>
+        <div class="box">
+          <ul class="newsContents">
+              <a href="#">
+                <li>
+                  <div class="day">2022.04</div>
+                  <div class="label">お知らせ</div>
+                  <div class="text">【ご来館のお客様へのお願い】</div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="day">2022.04</div>
+                  <div class="label">イベント</div>
+                  <div class="text">春の特別展示会開催　「千島海溝 深海生物」</div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="day">2022.02</div>
+                  <div class="label">お知らせ</div>
+                  <div class="text">久遠水族館がオープンしました。</div>
+                </li>
+              </a>
+              <button class="newsMore">もっと見る</button>
+          </ul>
+      
+        </div>
+      </div>
+    </section>
+    <!-- 久遠水族館の楽しみ方 -->
+    <section>
+      <div class="wrap">
+        <h3 class="heading">
+          久遠水族館の楽しみ方
+        </h3>
+        <p class="comment">家族旅行やデート、お出かけ、久遠水族館はいつでも・誰とでも<br>深海の中にいるような神秘的な世界観が味わえます。</p>
+        <p class="comment">シチュエーションに合わせた、久遠水族館のいろいろな楽しみ方をご紹介します。</p>
+        <div class="box">
+          <ul class="situationContents">
+            <li class="situation situation1">
+              <p>家族と</p>
+              <a href="#">
+                <img src="img/situation1.jpg" alt="家族と">
+              </a>
+            </li>
+            <li class="situation situation2">
+              <p>恋人と</p>
+              <a href="#">
+                <img src="img/situation2.jpg" alt="恋人と">
+              </a>
+            </li>
+            <li class="situation situation3">
+              <p>1人でも</p>
+              <a href="#">
+                <img src="img/situation3.jpg" alt="1人でも">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 久遠水族館の深海カフェ -->
+    <div class="wrap">
+      <h3 class="heading">
+        久遠水族館の深海カフェ
+      </h3>
+      <p class="comment">軽食やドリンクなど久遠水族館オリジナル料理を提供します。</p>
+      <div class="foodwrap">
+        <a href="#" class="foodImage"></a>
+      </div>
+    </div>
+    <!-- チケット料金 -->
+    <section>
+      <div class="wrap">
+        <h3 class="heading">
+          チケット料金
+        </h3>
+        <div class="priceList">
+          <ul class="priceBox priceList1">
+            <h4>当日券の料金</h4>
+            <ul>
+              <li>
+                <div class="subject">子供(中学生以下)</div>
+                <div class="price">1,000円</div>
+              </li>
+              <li>
+                <div class="subject">大人(高校生以上)</div>
+                <div class="price">1,700円</div>
+              </li>
+              <li>
+                <div class="subject">シルバー(65歳以上)</div>
+                <div class="price">1,000円</div>
+              </li>
+            </ul>
+          </ul>
+          <ul class="priceBox priceList2">
+            <h4>年間パスポートの料金</h4>
+            <ul>
+              <li>
+                <div class="subject">子供(中学生以下)</div>
+                <div class="price">2,100円</div>
+              </li>
+              <li>
+                <div class="subject">大人(高校生以上)</div>
+                <div class="price">3,300円</div>
+              </li>
+              <li>
+                <div class="subject">シルバー(65歳以上)</div>
+                <div class="price">2,100円</div>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- アクセスマップ -->
+    <section>
+      <div class="wrap" style="margin-bottom: 0;">
+        <h3 class="heading">
+          アクセスマップ
+        </h3>
+        <div class="mapwrap">
+          <a href="#" class="mapImage"></a>
+        </div>
+      </div>
+    </section>
+    <!-- フッター -->
+    <footer>
+      <div class="footerWrap">
+        <div class="footerLeft">
+          <div class="footerBox">
+            <h4 class="title">久遠水族館</h4>
+            <p>〒625-0135</p>
+            <p>京都府舞鶴市千歳８９７</p>
+            <ul>
+              <li>
+                <div class="mail">TEL</div>
+                <div class="num">00-0000-0000</div>
+              </li>
+              <li>
+                <div class="mail">mail</div>
+                <div class="num">×××@○○○.com</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footerRight">
+
+          <div class="footerBox">
+            <h4>久遠水族館について</h4>
+            <ul>
+              <a href="#">
+                <li>企業情報</li>
+              </a>
+              <a href="#">
+                <li>スタッフ紹介</li>
+              </a>
+              <a href="#">
+                <li>ブログ</li>
+              </a>
+              <a href="#">
+                <li>採用</li>
+              </a>
+            </ul>
+          </div>
+          <div class="footerBox">
+            <h4>営業時間について</h4>
+            <ul>
+              <a href="#">
+                <li>営業時間</li>
+              </a>
+              <a href="#">
+                <li>チケット料金</li>
+              </a>
+              <a href="#">
+                <li>年間パス</li>
+              </a>
+            </ul>
+          </div>
+          <div class="footerBox">
+            <h4>館内ガイド</h4>
+            <ul>
+              <a href="#">
+                <li>館内のご案内</li>
+              </a>
+              <a href="#">
+                <li>水族館以外の施設のご案内</li>
+              </a>
+              <a href="#">
+                <li>久遠水族館の深海カフェについて</li>
+              </a>
+              <a href="#">
+                <li>グッズ紹介</li>
+              </a>
+            </ul>
+          </div>
+          <div class="footerBox">
+            <h4>アクセス</h4>
+            <ul>
+              <a href="#">
+                <li>地図・住所</li>
+              </a>
+              <a href="#">
+                <li>公共交通機関をご利用のお客様</li>
+              </a>
+              <a href="#">
+                <li>お車をご利用のお客様</li>
+              </a>
+              <a href="#">
+                <li>駐車場のご案内</li>
+              </a>
+            </ul>
+          </div>
+          <div class="footerBox">
+            <h4>生物</h4>
+            <ul>
+              <a href="#">
+                <li>新着生物</li>
+              </a>
+              <a href="#">
+                <li>久遠水族館の生物図鑑</li>
+              </a>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+  </main>
+
+  <!-- slick -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body> 
+</html>
